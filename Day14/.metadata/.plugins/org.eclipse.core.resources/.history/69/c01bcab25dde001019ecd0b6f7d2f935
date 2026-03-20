@@ -1,0 +1,25 @@
+package prg.main.example;
+
+class Super{
+	public final void printRecord( ) {
+		System.out.println("Super.printRecord()");
+	}
+	public void displayRecord() {
+		
+	}
+}
+
+class Sub extends Super{
+	@Override
+	public void displayRecord() {
+		super.displayRecord();
+	}
+}
+
+public class Program {
+	public static void main(String[] args) {
+		Super s2 = new Sub();//upcasting
+		s2.printRecord();
+		s2.displayRecord();
+	}
+}

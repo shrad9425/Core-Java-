@@ -1,0 +1,48 @@
+package org.main.example;
+
+import java.util.Dictionary;
+import java.util.Hashtable;
+
+public class Program {
+	private static Dictionary<Integer, String> getDictionary() {
+		Dictionary<Integer, String> d = new Hashtable<>();
+		d.put(1, "ranu");
+		d.put(2, "manu");
+		d.put(3, "sanu");
+		d.put(4, "tanu");
+		return d;
+		
+	}
+	
+	private static void getSize(Dictionary<Integer, String> d) {
+		System.out.println(d.size());
+	}
+	private static void getKey(Dictionary<Integer, String> d,int id) {
+		Integer key = new Integer(id);
+		String get = d.get(key);
+		if (get != null)
+			System.out.println(get+" "+ key);
+		else
+			System.out.println("invalid");
+	}
+	public static void main(String[] args) {
+		Dictionary<Integer, String> d = Program.getDictionary();
+		Program.getSize(d);
+		Program.getKey(d,2);
+	}
+	
+	
+
+	public static void main1(String[] args) {
+		Dictionary<Integer, String> d = new Hashtable<>();
+		d.put(1, "ranu");
+		d.put(2, "manu");
+		d.put(3, "sanu");
+		d.put(4, "tanu");
+		System.out.println(d.toString());
+		
+		
+	}
+
+	
+}

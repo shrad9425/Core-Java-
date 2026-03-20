@@ -1,0 +1,44 @@
+package org.main.spider;
+
+import java.util.Date;
+
+class Employee implements Cloneable{
+	private int empid;
+	private Date joinDate;
+	public Employee(int empid, int day, int month, int year) {
+		this.empid = empid;
+		this.joinDate = new Date(day,month, year);
+	}
+	public void setEmpid(int empid) {
+		this.empid = empid;
+	}
+	public void setJoinDate(Date joinDate) {
+		this.joinDate = joinDate;
+	}
+	@Override
+	public Object clone()throws CloneNotSupportedException {
+		Employee employee = (Employee) super.clone();
+		return employee;
+	}
+	@Override
+	public String toString() {
+		return this.empid+", "+this.joinDate;
+	}
+}
+public class Program {
+	public static void main(String[] args) {
+		try {
+			Employee emp = new Employee(2003, 13,9,2003);
+			Employee emp1 = (Employee) emp.clone();
+			System.out.println(emp);
+			System.out.println(emp1);
+		} catch (CloneNotSupportedException e) {
+			e.printStackTrace();
+		}
+	}
+	public static void main1(String[] args) {
+		Employee emp = new Employee(2003, 13,9,2003);
+		Employee emp1 = emp;
+		System.out.println(emp == emp1);
+	}
+}

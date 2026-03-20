@@ -1,0 +1,104 @@
+package org.main.example;
+
+//String twisters
+public class Program {
+	public static void main(String[] args) {
+		String s1 = "ranu, bhoir";
+		String str = "bhoir";
+		String s2 = "ranu, "+str;
+		if(s1.equals(s2)) {
+			System.out.println("equal");
+
+		}else {
+			System.out.println("not equal");
+
+		}
+		//Output:	not equal
+	}
+	public static void main7(String[] args) {
+		String s1 = "ranu, bhoir";
+		String str = "bhoir";
+		String s2 = "ranu, "+str;
+		if(s1 == s2) {
+			System.out.println("equal");
+
+		}else {
+			System.out.println("not equal");
+
+		}
+		//Output:	not equal
+	}
+	public static void main6(String[] args) {
+		String s1 = "ranu";
+		String s2 = new String("ranu");
+		if(s1.equals(s2)) {
+			System.out.println("equal");
+
+		}else {
+			System.out.println("not equal");
+
+		}
+		//Output:	equal
+	}
+	public static void main5(String[] args) {
+		String s1 = "ranu";
+		String s2 = new String("ranu");
+		if(s1 == s2) {
+			System.out.println("equal");
+
+		}else {
+			System.out.println("not equal");
+
+		}
+		//Output:	not equal
+	}
+	public static void main4(String[] args) {
+		String s1 = new String("ranu");
+		String s2 = new String("ranu");
+		if(s1.equals(s2)) {
+			System.out.println("equal");
+
+		}else {
+			System.out.println("not equal");
+
+		}
+		//Output:	equal
+	}
+	public static void main3(String[] args) {
+		String s1 = new String("ranu");
+		String s2 = new String("ranu");
+		if(s1 == s2) {
+			System.out.println("equal");
+
+		}else {
+			System.out.println("not equal");
+
+		}
+		//Output:	not equal
+	}
+	public static void main2(String[] args) {
+		String s1 = "ranu";
+		String s2 = "ranu";
+		if(s1.equals(s2)) {
+			System.out.println("equal");
+
+		}else {
+			System.out.println("not equal");
+
+		}
+		//Output:	equal
+	}
+	public static void main1(String[] args) {
+		String s1 = "ranu";
+		String s2 = "ranu";
+		if(s1 == s2) {
+			System.out.println("equal");
+
+		}else {
+			System.out.println("not equal");
+
+		}
+		//Output:	equal
+	}
+	
+}

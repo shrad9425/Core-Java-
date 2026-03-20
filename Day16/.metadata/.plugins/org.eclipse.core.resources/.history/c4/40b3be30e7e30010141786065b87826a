@@ -1,0 +1,29 @@
+package org.main.spider;
+
+interface A {
+	int num1 = 10;
+	int num3 = 40;
+}
+interface B{
+	int num2 = 20;
+	int num4 = 60;
+}
+
+interface D extends A,B{
+	int num3 = 50;
+	int num4 = 60;
+}
+public class Program {
+	public static void main(String[] args) {
+		System.out.println(A.num3);
+		System.out.println(D.num3);
+	}
+	public static void main2(String[] args) {
+		System.out.println(D.num1);
+		System.out.println(D.num2);
+	}
+	public static void main1(String[] args) {
+		System.out.println(A.num1);
+		System.out.println(B.num2);
+	}
+}

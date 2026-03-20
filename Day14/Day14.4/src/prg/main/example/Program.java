@@ -1,0 +1,25 @@
+package prg.main.example;
+
+final class Super{
+	public final void printRecord( ) {
+		System.out.println("Super.printRecord()");
+	}
+	public void displayRecord() {
+		System.out.println("Super.displayRecord()");
+	}
+}
+
+//class Sub extends Super{	// final class does not inherit into sub class
+class Sub {	
+	public void displayRecord() {
+		System.out.println("sub.displayRecord()");
+	}
+}
+
+public class Program {
+	public static void main(String[] args) {
+		Sub s2 = new Sub();//upcasting
+		//s2.printRecord();
+		s2.displayRecord();
+	}
+}

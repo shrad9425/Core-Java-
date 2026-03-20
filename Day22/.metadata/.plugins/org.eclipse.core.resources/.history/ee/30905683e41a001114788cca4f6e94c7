@@ -1,0 +1,44 @@
+package org.main.example;
+
+import java.util.Hashtable;
+import java.util.Map;
+
+public class Program {
+	private static Map<Integer, String> getMap() {
+		Map<Integer, String> map = new Hashtable<>();
+		map.put(10, "apple");
+		map.put(20, "mango");
+		map.put(30, "guava");
+		map.put(40, "banana");
+		return map;
+	}
+	private static void printAllEntries(Map<Integer, String> map) {
+		System.out.println(map.size());
+	}
+	private static void printKeys(Map<Integer, String> map, int id) {
+		Integer keys = new Integer(id);
+		if(map.containsKey(keys)) {
+			String value = map.get(keys);
+			System.out.println( keys+" "+value); 
+		}else {
+	      System.out.println(keys+" not found"); 
+		}
+	}
+	public static void main(String[] args) {
+		Map<Integer, String> map = Program.getMap();
+		//Program.printAllEntries(map);
+		Program.printKeys(map,20);
+	}
+	
+	
+	
+	public static void main1(String[] args) {
+		Map<Integer, String> map = new Hashtable<>();
+		map.put(10, "apple");
+		map.put(20, "mango");
+		map.put(30, "guava");
+		map.put(40, "banana");
+		map.put(null, "apple");
+		System.out.println(map);
+	}
+}

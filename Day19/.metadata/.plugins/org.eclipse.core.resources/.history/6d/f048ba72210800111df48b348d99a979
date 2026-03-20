@@ -1,0 +1,46 @@
+package org.main.example;
+
+import java.lang.Thread.State;
+
+class Sample{
+	public Sample() {
+		System.out.println("inside the constructor"+this.getClass().getSimpleName());
+	}
+	public void print() { 
+		System.out.println("Inside print method"+this.getClass().getSimpleName());
+		
+	}
+	@Override
+	protected void finalize() throws Throwable {
+		System.out.println("inside finalize method"+this.getClass().getSimpleName());
+		
+		
+		Thread th =Thread.currentThread();
+
+		String name = th.getName();
+		System.out.println(name);	//Thread-0
+		
+		int priority = th.getPriority();
+		System.out.println(priority);	//5
+		
+		ThreadGroup thgrp = th.getThreadGroup();
+		System.out.println(thgrp.getName());	//main
+		
+		State state  = th.getState();
+		System.out.println(state.name());
+		
+		Boolean type = th.isDaemon();
+		System.out.println(type ?"Daemon type":"user type");
+		
+		Boolean status = th.isAlive();		
+		System.out.println(status ? "Alive" :"Death");
+	}
+}
+public class Program {
+	public static void main(String[] args) {
+		Sample s =null;
+		s = new Sample();
+		s= null;
+		System.gc();
+	}
+}

@@ -1,0 +1,28 @@
+package org.main.example;
+
+import java.util.Enumeration;
+import java.util.Vector;
+
+public class Program {
+	//fail-safe iterator => when concurrentModificationEception does not occur
+	
+	public static void main(String[] args) {
+		Vector<Integer> v = new Vector<>();
+		for(int i=1; i <=3; i++){
+			v.add(i);
+		}
+		Integer in = null;
+		Enumeration<Integer> e = v.elements();
+		while(e.hasMoreElements()) {
+			in = e.nextElement();
+			System.out.print(in+" ");
+			System.out.println();
+			if(in == 3) {
+				v.add(9);	
+				//v.remove(9);
+			}
+			System.out.print(v+" ");
+
+		}
+	}
+}

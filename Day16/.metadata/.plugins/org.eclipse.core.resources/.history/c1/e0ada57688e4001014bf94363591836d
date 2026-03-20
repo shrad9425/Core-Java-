@@ -1,0 +1,28 @@
+package org.main.spider;
+
+import java.util.Date;
+
+class Employee{
+	private int empid;
+	private Date joinDate;
+	public Employee(int empid, int day, int month, int year) {
+		this.empid = empid;
+		this.joinDate = new Date(day,month, year);
+	}
+	public void setEmpid(int empid) {
+		this.empid = empid;
+	}
+	public void setJoinDate(Date joinDate) {
+		this.joinDate = joinDate;
+	}
+	@Override
+	public String toString() {
+		return this.empid+", "+this.joinDate;
+	}
+}
+public class Program {
+	public static void main(String[] args) {
+		Employee emp = new Employee(2003, 13,9,2003);
+		emp.toString();
+	}
+}

@@ -1,0 +1,9 @@
+package org.main.example;
+
+public class IOException extends Exception {
+		String str;
+		public IOException(String str) {
+			this.str = str;
+		}
+	}
+

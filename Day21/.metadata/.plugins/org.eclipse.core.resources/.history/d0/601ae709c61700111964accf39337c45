@@ -1,0 +1,14 @@
+package org.main.example;
+
+import java.util.Stack;
+
+//Stack
+public class Program {
+	public static void main(String[] args) {
+		Stack<Integer> s = new Stack<>();
+		for(int i=10;i<=5; i++) {
+			s.add(i);
+		}
+		System.out.println(s);
+	}
+}

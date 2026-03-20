@@ -1,0 +1,13 @@
+package org.main.example;
+
+
+public class Program {
+	public static void main(String[] args) {
+		String str = "hello";
+		System.out.println(str+" hello");
+		System.out.println(str+" 0123");
+		
+		System.out.println(str.concat(str));
+
+	}
+}

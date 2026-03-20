@@ -1,0 +1,10 @@
+package org.main.code;
+
+import org.main.shrad.Date;
+
+public class Program {
+	public static void main(String[] args) {
+		Date dt = new Date();
+		System.out.println(dt.toString());
+	}
+}

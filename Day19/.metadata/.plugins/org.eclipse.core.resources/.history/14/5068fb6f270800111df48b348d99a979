@@ -1,0 +1,19 @@
+package org.main.example;
+
+
+class Task extends Thread{
+	public Task(String name) {
+		super(name);
+		System.out.println("inside the constructor"+this.getClass().getSimpleName());
+	}
+	@Override
+	public void run() {
+		System.out.println("inside print method");
+	}
+}
+public class Program {
+	public static void main(String[] args) {
+		Thread th1 = new Thread("Thread#1");
+		th1.start();
+	}
+}

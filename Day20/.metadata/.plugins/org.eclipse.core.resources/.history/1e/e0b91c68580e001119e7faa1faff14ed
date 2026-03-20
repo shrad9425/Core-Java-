@@ -1,0 +1,23 @@
+package org.main.example;
+
+public class Waiter extends Thread {
+	private Kitchen kitchen;
+	
+	public Waiter(Kitchen kitchen) {
+		this.kitchen = kitchen;
+	}
+	public void run() {
+		try {
+			while(true) {
+				String order = kitchen.getOrder();
+				serve(order); 
+				Thread.sleep(1000);
+			}
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
+	private void serve(String order) {
+		System.out.println("Serve:"+order);
+	}
+}

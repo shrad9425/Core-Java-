@@ -1,0 +1,34 @@
+package prg.main.example;
+
+abstract class A {
+	int num1;
+	int num2;
+	public A(int num1, int num2) {	//sole constructor
+		this.num1 = num1;
+		this.num2 = num2;
+	}
+	public void printRecord() {
+		System.out.println("Num1: "+num1);
+		System.out.println("Num2: "+num2);
+	}
+}
+class B extends A{
+	int num3;
+	public B(int num1 , int num2, int num3) {
+		super(num1, num2);
+		this.num3 = num3;
+	}
+	@Override
+	public final void printRecord() {
+		super.printRecord();
+		System.out.println("Num3 :"+ num3);
+	}
+}
+
+
+public class Program {
+	public static void main(String[] args) {
+		B b = new B(10,20,30);
+		b.printRecord();
+	}
+}

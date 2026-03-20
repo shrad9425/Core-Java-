@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.time.LocalDate"/>
+    <fullyQualifiedTypeName name="org.main.example.Date"/>
+    <fullyQualifiedTypeName name="org.main.shrad.Employee"/>
+    <fullyQualifiedTypeName name="java.sql.SQLOutput"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="org.main.example.Employee"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="javax.management.remote.SubjectDelegationPermission"/>
+    <fullyQualifiedTypeName name="org.main.example.Person.Date"/>
+    <fullyQualifiedTypeName name="org.main.shrad.Date"/>
+    <fullyQualifiedTypeName name="org.main.code.Program"/>
+</qualifiedTypeNameHistroy>

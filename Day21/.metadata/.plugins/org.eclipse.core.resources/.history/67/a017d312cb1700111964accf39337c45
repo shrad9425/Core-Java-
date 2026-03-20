@@ -1,0 +1,41 @@
+package org.main.example;
+
+import java.util.ArrayDeque;
+import java.util.Deque;
+import java.util.Stack;
+
+//Stack
+public class Program {
+	public static void main(String[] args) {
+		Deque<Integer> s = new ArrayDeque<Integer>();
+		
+		for(int i=1;i<=5; i++) {
+			s.add(i);
+		}
+		System.out.println(s);
+		
+		Integer element = null;
+		if(!s.isEmpty()) {
+			element = s.peek();
+			System.out.println("Removed	:	"+ element);
+			s.pop();
+			System.out.println("Final	:	"+s);
+		}
+	}
+
+	public static void main1(String[] args) {
+		Stack<Integer> s = new Stack<>();
+		Integer element = null;
+		for(int i=1;i<=5; i++) {
+			s.add(i);
+		}
+		System.out.println(s);
+		
+		if(!s.empty()) {
+			element = s.peek();
+			System.out.println("Removed	:	"+ element);
+			s.pop();
+			System.out.println("Final	:	"+s);
+		}
+	}
+}

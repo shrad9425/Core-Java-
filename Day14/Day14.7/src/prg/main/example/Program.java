@@ -1,0 +1,24 @@
+package prg.main.example;
+
+class A extends Exception{}
+class B extends Exception{}
+class C extends Exception{}
+
+public class Program {
+	public static void print(int num) throws Exception {
+		if (num == 10)
+			throw new A();
+		if (num == 20)
+			throw new B();
+		if (num == 30)
+			throw new C();
+		System.out.println("Num: "+ num);
+	}
+	public static void main(String[] args) {
+		try {
+			Program.print(20);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+}

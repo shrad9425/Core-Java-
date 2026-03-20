@@ -1,0 +1,28 @@
+package org.example.main;
+
+class Box{
+	private String name;
+	private int empid;
+	public Box(String name, int empid) {
+		this.name = name;
+		this.empid = empid;
+	}
+	public String getName() {
+		return name;
+	}
+	public int getEmpid() {
+		return empid;
+	}
+	public void printRecord() {
+		System.out.println(this.name +" "+this.empid);
+
+	}
+}
+
+
+public class Program {
+	public static void main(String[] args) {
+		Box b1 = new Box("Ranu",113);
+		b1.printRecord();
+	}
+}

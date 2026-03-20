@@ -1,0 +1,31 @@
+package org.main.example;
+
+import java.util.Scanner;
+
+public class Program {
+	public static void main(String[] args) {
+		Scanner sc = null;
+		try {
+			System.out.println("Open resource");
+			sc = new Scanner(System.in);
+			System.out.print("Num1:");
+			int num1 = sc.nextInt();
+			
+			System.out.print("Num2:");
+			int num2 = sc.nextInt();
+			
+			
+			if(num2 == 0)
+				throw new IOException("not divisible by 0");
+				int result = num1/num2;
+				System.out.println("Result:"+result);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			//e.printStackTrace();
+			//System.out.println(e.getMessage());
+			
+		}
+		System.out.println("Close resource");
+		sc.close();
+	}
+}

@@ -1,0 +1,46 @@
+package org.example.main;
+
+import java.util.ArrayList;
+
+public class Program {
+	public static ArrayList getInteger() {
+		ArrayList<Integer> list = new ArrayList<>();
+		list.add(10);		//autoboxing
+		list.add(20);		
+		list.add(30);
+		list.add(40);
+		return list;
+	}
+	
+	public static ArrayList getString() {
+		ArrayList<String> list = new ArrayList<>();
+		list.add("Ranu");		//autoboxing
+		list.add("Shraddha");		
+		list.add("Swaransh");
+		list.add("Swara");
+		return list;
+		
+	}
+	public static ArrayList getFloat() {
+		ArrayList<Float> list = new ArrayList<>();
+		list.add(1.2f);		//autoboxing
+		list.add(1.3f);		
+		list.add(1.4f);
+		list.add(1.5f);
+		return list;	
+	}
+	public static void printRecord(ArrayList list) {
+		for( Object element : list)
+			System.out.println(element);
+	}
+	public static void main(String[] args) {
+		ArrayList<Integer> integerList = Program.getInteger();
+		Program.printRecord(integerList);
+		
+		ArrayList<Integer> stringList = Program.getString();
+		Program.printRecord(stringList);
+		
+		ArrayList<Integer> floatList = Program.getFloat();;
+		Program.printRecord(floatList);
+	}
+}

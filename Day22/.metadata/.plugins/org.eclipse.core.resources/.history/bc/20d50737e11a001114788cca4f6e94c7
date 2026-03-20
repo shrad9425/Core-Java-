@@ -1,0 +1,26 @@
+package org.main.example;
+
+import java.util.Hashtable;
+import java.util.Map;
+
+public class Program {
+	public static void main(String[] args) {
+		Map<Integer, String> map = new Hashtable<>();
+		map.put(10, "apple");
+		map.put(20, "mango");
+		map.put(30, "guava");
+		map.put(40, "banana");
+		//map.clear();
+		map.hashCode();
+		System.out.println(map);
+	}
+	public static void main1(String[] args) {
+		Map<Integer, String> map = new Hashtable<>();
+		map.put(10, "apple");
+		map.put(20, "mango");
+		map.put(30, "guava");
+		map.put(40, "banana");
+		map.put(null, "apple");
+		System.out.println(map);
+	}
+}

@@ -1,0 +1,22 @@
+package org.main.example;
+
+import java.util.Date;
+
+public class Program {
+	public static void main(String[] args) {
+		int num = 123;
+		System.out.println(new Date()+" hello");
+		String dt = ("num	:"+ new Date());
+		System.out.println(concat(num))	//error
+
+	}
+	
+	public static void main1(String[] args) {
+		String str = "hello";
+		System.out.println(str+" hello");
+		System.out.println(str+" 0123");
+		
+		System.out.println(str.concat(str));
+
+	}
+}

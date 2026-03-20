@@ -1,0 +1,28 @@
+package org.example.main;
+
+import java.sql.Date;
+import java.time.LocalDate;
+
+class Box<V>{
+	private V date;
+	
+	public Box(V day, V month,V year) {
+		this.date = date;
+	}
+	public V getDate() {
+		return date;
+	}
+	public void setDate(V date) {
+		this.date = date;
+	}
+	
+}
+
+public class Program {
+	public static void main(String[] args) {
+		LocalDate ld = LocalDate.now();
+		Box<Date> b1 = new Box<>(ld);
+		Date date = b1.getDate();
+		System.out.println(date);
+	}
+}

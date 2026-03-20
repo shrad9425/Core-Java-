@@ -1,0 +1,23 @@
+package org.main.example;
+
+
+class MovieTicketApp extends Thread{ 
+	int total=0;
+	@Override
+	public int run() {
+		for(int i=1; i<=10; i++) {
+			total = total+100;
+		}
+		return total;
+	}
+	
+}
+
+public class Program {
+	public static void main(String[] args){
+		MovieTicketApp mt = new MovieTicketApp();
+		mt.start();
+		System.out.println("Total :"+mt.total +" Rs");
+
+	}
+}

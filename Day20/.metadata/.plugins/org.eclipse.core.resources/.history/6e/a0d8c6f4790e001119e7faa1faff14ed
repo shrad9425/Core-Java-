@@ -1,0 +1,13 @@
+package org.main.example;
+
+import java.lang.Thread.State;
+
+public class Program {
+	public static void main(String[] args) {
+		State state[] = State.values();
+		for(State states: state) {
+			//System.out.println(states.name()+"	"+states.ordinal());
+			System.out.printf("%-10s %25d\n", states.name(), states.ordinal());
+		}
+	}
+}

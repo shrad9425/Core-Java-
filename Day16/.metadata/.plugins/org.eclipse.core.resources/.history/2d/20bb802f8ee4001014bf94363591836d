@@ -1,0 +1,39 @@
+package org.main.spider;
+
+import java.util.LinkedList;
+import java.util.Scanner;
+
+class List{
+	private LinkedList list;
+	
+	private boolean empty() {
+		return false;
+	}
+	public void printList() {
+		if (empty()) {
+			System.out.println("It is Empty");
+			return;
+		}else {
+			System.out.println("LinkedList array:");
+		}System.out.println(list);
+	}
+	
+}
+public class Program {
+	public static void main(String[] args) {
+
+		LinkedList<Integer> list = new LinkedList<Integer>();
+		list.addLast(10);
+		list.addLast(20);
+		list.addLast(30);
+		list.addLast(40);
+		list.addLast(50);
+		list.addLast(60);
+			
+		list.removeFirst();
+		list.removeFirst();
+			
+		List lt = new List();
+		lt.printList();
+	}
+}

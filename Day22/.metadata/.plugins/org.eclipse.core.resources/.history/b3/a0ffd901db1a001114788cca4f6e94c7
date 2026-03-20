@@ -1,0 +1,15 @@
+package org.main.example;
+
+import java.util.Dictionary;
+import java.util.Hashtable;
+
+public class Program {
+	public static void main(String[] args) {
+		Dictionary<Integer, String> d = new Hashtable<>();
+		d.put(1, "ranu");
+		d.put(2, "manu");
+		d.put(3, "sanu");
+		d.put(4, "tanu");
+		System.out.println(d.hashCode());
+	}
+}

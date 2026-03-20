@@ -1,0 +1,28 @@
+package org.example.main;
+
+public class Program {
+	//auto-Unboxing
+	public static void main1(String[] args) {
+		int num = 23;
+		Object obj = num;
+		System.out.println(obj);
+	}
+	
+	//Unboxing
+	public static void main(String[] args) {
+		String str = "123";
+		int i = Integer.parseInt(str);
+		System.out.println(i);
+		
+		Integer i1 = 13 ;
+		int i2 = Integer.valueOf(i1);
+		System.out.println(i2);
+		
+		Integer i3 = new Integer("2003");
+		int number = i3;
+		System.out.println(number);
+		
+		
+		
+	}
+}

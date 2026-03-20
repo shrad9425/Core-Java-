@@ -1,0 +1,18 @@
+package org.main.spider;
+
+interface Printable {
+	int num = 123;
+	void print();
+}
+class Test implements Printable{
+	@Override
+	public void print() {
+		System.out.println(Printable.num);
+	}
+}
+public class Program {
+	public static void main(String[] args) {
+		Printable p = new Test();	//upcasting
+		p.print();
+	}
+}

@@ -1,0 +1,53 @@
+package org.main.example;
+
+
+class Person {	//super class
+	String name;
+	int age;
+	
+	public Person(String name, int age) {
+		this.name = name;
+		this.age = age;
+	}
+	
+	public Person() {
+		this(null, 0);
+	}
+	public void showRecord() {
+		System.out.println("Name	: "+this.name);
+		System.out.println("Age	: "+this.age);
+	}
+	//nested class
+	class Date{
+		public void printRecord( ) {
+			System.out.println("Person.Date.printRecord()");
+		}
+	}
+}
+class Employee extends Person{	//sub class
+	int empid;
+	float salary;
+
+	public Employee( ) {
+		this.empid = 0;
+		this.salary = 0.0f;
+	}
+	public Employee(String name, int age, int empid, float salary) {
+		super(name, age);
+		this.empid = empid;
+		this.salary = salary;
+	}
+	public void displayRecord() {
+		this.showRecord();
+		System.out.println("Empid	:"+this.empid);
+		System.out.println("Salary	:"+this.salary);
+	}
+}
+public class Program {
+	public static void main(String[] args) {
+		//Employee emp = new Employee();
+		//emp.displayRecord();
+		Person.Date dt1 = new Person().new Date();
+		dt1.printRecord();
+	}
+}

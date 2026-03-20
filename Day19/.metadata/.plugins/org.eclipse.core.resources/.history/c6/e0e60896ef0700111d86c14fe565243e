@@ -1,0 +1,36 @@
+package org.main.example;
+
+import java.lang.Thread.State;
+
+public class Program {
+	public static void main(String[] args) {
+		Thread th = new Thread();
+		
+		String name = th.getName();
+		System.out.println(name);	//Thread-0
+		
+		int priority = th.getPriority();
+		System.out.println(priority);	//5
+		
+		ThreadGroup thgrp = th.getThreadGroup();
+		//System.out.println(thgrp); //java.lang.ThreadGroup[name=main,maxpri=10]
+		System.out.println(thgrp.getName());	//main
+		
+		State state  = th.getState();
+		System.out.println(state);
+		
+		Boolean type = th.isDaemon();
+		System.out.println(type);
+		
+		Boolean status = th.isAlive();		
+		System.out.println(status);
+		
+		Boolean interrupt = th.isInterrupted();
+		System.out.println(interrupt);
+	}
+	public static void main1(String[] args) {
+		Thread th = new Thread();
+		//th.start();
+		System.out.println(th.toString());
+	}
+}

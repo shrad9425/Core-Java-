@@ -1,0 +1,56 @@
+package org.main.example;
+
+class Person{	//super class
+	private String name;
+	private int age;
+	
+	public Person() {
+		this("",0);
+	}
+	public Person(String name, int age) {
+		this.name = name;
+		this.age = age;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age = age;
+	}
+	public void showRecord() {
+		System.out.println("Name	:"+this.name);
+		System.out.println("Age	:"+this.age);
+	}
+	
+}
+class Employee extends Person{	//sub class
+	int empid;
+	float salary;
+	public Employee( ) {
+		this.empid = empid;
+		this.salary = salary;
+	}
+	public Employee(int empid, float salary) {
+		this.empid = empid;
+		this.salary = salary;
+	}
+	public void displayRecord() {
+		System.out.println("Name	:");
+		System.out.println("Age	:");
+		System.out.println("Empid	:");
+		System.out.println("Salary	:");
+	}
+}
+public class Program {
+	public static void main(String[] args) {
+		Employee emp = new Employee();
+		emp.displayRecord();
+	
+	}
+}

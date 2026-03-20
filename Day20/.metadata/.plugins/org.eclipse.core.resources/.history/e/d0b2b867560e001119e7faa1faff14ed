@@ -1,0 +1,10 @@
+package org.main.example;
+
+import org.main.domain.Chief;
+
+public class Restruant {
+	public static void main(String[] args){
+		Kitchen kitchen = new Kitchen();
+		Thread chiefThread = new Chief();
+	}
+}

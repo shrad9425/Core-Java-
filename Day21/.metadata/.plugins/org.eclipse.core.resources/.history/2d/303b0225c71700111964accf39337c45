@@ -1,0 +1,22 @@
+package org.main.example;
+
+import java.util.Stack;
+
+//Stack
+public class Program {
+	public static void main(String[] args) {
+		Stack<Integer> s = new Stack<>();
+		Integer element = null;
+		for(int i=1;i<=5; i++) {
+			s.add(i);
+		}
+		System.out.println(s);
+		
+		if(!s.empty()) {
+			element = s.peek();
+			System.out.println("Removed	:	"+ element);
+			s.pop();
+			System.out.println("Final	:	"+s);
+		}
+	}
+}

@@ -1,0 +1,30 @@
+package org.main.example;
+
+class Employee extends Person{	//sub class
+	private String name;
+	private int age;
+	private int empid;
+	private float salary;
+
+	public Employee( ) {
+		this.empid = 0;
+		this.salary = 0.0f;
+	}
+	public Employee(int empid, float salary) {
+		super(name,age);
+		this.empid = empid;
+		this.salary = salary;
+	}
+	public void displayRecord() {
+		this.showRecord();
+		System.out.println("Empid	:"+this.empid);
+		System.out.println("Salary	:"+this.salary);
+	}
+}
+public class Program {
+	public static void main(String[] args) {
+		Employee emp = new Employee();
+		emp.displayRecord();
+	
+	}
+}

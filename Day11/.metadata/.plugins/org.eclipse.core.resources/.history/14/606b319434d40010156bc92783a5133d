@@ -1,0 +1,38 @@
+package org.main.example;
+
+class Person{
+	String name;
+	int age;
+	public Person() {
+		this(null,0);
+	}
+	public Person(String name, int age) {
+		this.name = name;
+		this.age = age;
+	}
+	public String toString() {
+		return this.name +", "+this.age;
+	}
+}
+class Employee extends Person{
+	int empid;
+	float salary;
+	
+	public Employee() {
+		this("",0,0,0);
+	}
+	public Employee(String name, int age, int empid, float salary) {
+		super(name, age);
+		this.empid = empid;
+		this.salary = salary;
+	}
+	public String toString() {
+		return this.empid+", "+this.salary;
+	}
+}
+public class Program {
+	public static void main(String[] args) {
+		Employee emp = new Employee();
+		System.out.println(emp.toString()); 
+	}
+}

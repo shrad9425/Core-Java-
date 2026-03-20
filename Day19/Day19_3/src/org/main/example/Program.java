@@ -1,0 +1,26 @@
+package org.main.example;
+
+
+class Task implements Runnable{
+	public Task() {
+		//todo
+	}
+	public void run() {
+		System.out.println("inside print method");
+	}
+}
+public class Program {
+	public static void main(String[] args) {
+		Runnable target = new Task();
+		ThreadGroup group = new ThreadGroup("domain");
+		
+		Thread th1 = new Thread(group, target);
+		th1.setName("Thread#1");
+		th1.start();
+		
+
+		Thread th2 = new Thread(group, target);
+		th2.setName("Thread#2");
+		th2.start();
+	}
+}

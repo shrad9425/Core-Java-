@@ -1,0 +1,22 @@
+package org.example.main;
+
+import java.sql.Date;
+
+class Box<T>{
+	T date;
+	public Box(T date) {
+		this.date = date;
+	}
+	public T getDate() {
+		return date;
+	}
+}
+public class Program {
+	public static void main(String[] args) {
+		Date dt = new Date(13,9,2003);
+		Box<Date> b1 = new Box<>(dt);
+		Date Date = b1.getDate();
+		System.out.println(date);
+		
+	}
+}

@@ -1,0 +1,73 @@
+package org.main.example;
+
+import java.util.Dictionary;
+import java.util.Enumeration;
+import java.util.Hashtable;
+
+public class Program {
+	private static Dictionary<Integer, String> getDictionary() {
+		Dictionary<Integer, String> d = new Hashtable<>();
+		d.put(1, "ranu");
+		d.put(2, "manu");
+		d.put(3, "sanu");
+		d.put(4, "tanu");
+		return d;
+		
+	}
+	
+	private static void getSize(Dictionary<Integer, String> d) {
+		System.out.println(d.size());
+	}
+	private static void getKey(Dictionary<Integer, String> d,int id) {
+		Integer key = new Integer(id);
+		String get = d.get(key);
+		if (get != null)
+			System.out.println(get+" "+ key);
+		else
+			System.out.println("invalid");
+	}
+	private static void getValues(Dictionary<Integer, String> d) {
+		Integer key = null;
+		Enumeration<Integer> keys = d.keys();
+		if(keys.hasMoreElements()) {
+			key = keys.nextElement();
+			System.out.println(key);
+		}
+		
+	}
+	private static void getValue(Dictionary<Integer, String> d) {
+		Enumeration<String> value = d.elements();
+		String values = null;
+		if(value.hasMoreElements()) {
+			values = value.nextElement();
+			System.out.println(values);
+		}
+	}
+	private static void removeElement(Dictionary<Integer, String> d) {
+		Integer key = 3;
+		String remove = d.remove(key);
+		System.out.println(remove);
+	}
+	
+	public static void main(String[] args) {
+		Dictionary<Integer, String> d = Program.getDictionary();
+		Program.getSize(d);
+		Program.getKey(d,20);
+		Program.getValues(d);
+		Program.getValue(d);
+		Program.removeElement(d);
+	}
+
+	public static void main1(String[] args) {
+		Dictionary<Integer, String> d = new Hashtable<>();
+		d.put(1, "ranu");
+		d.put(2, "manu");
+		d.put(3, "sanu");
+		d.put(4, "tanu");
+		System.out.println(d.toString());
+		
+		
+	}
+
+	
+}

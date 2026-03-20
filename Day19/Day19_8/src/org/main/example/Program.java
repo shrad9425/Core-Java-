@@ -1,0 +1,45 @@
+package org.main.example;
+
+
+class Task extends Thread{
+	public Task(String t ) {
+		System.out.println("inside task constructor");
+	}
+	@Override
+	public void run() {
+		System.out.println("inside Task.print method "+Thread.currentThread().getName());
+	}
+}
+class A extends Task{
+	public A( String t) {
+		super(t);
+		System.out.println("inside A constructor");
+	}
+
+	@Override
+	public void run() {
+		super.run();
+	}
+}
+class B extends A{
+	public B(String t) {
+		super(t);
+		System.out.println("inside B constructor");
+	}
+	@Override
+	public synchronized void start() { 
+		//Keep Empty 
+	} 
+}
+public class Program {
+	public static void main(String[] args) {
+		Thread a = new B("Thread#1");
+		Thread b = new A("Thread#2");
+	}
+}
+		/*inside task constructor
+		inside A constructor
+		inside B constructor
+		inside task constructor
+		inside A constructor
+		*/

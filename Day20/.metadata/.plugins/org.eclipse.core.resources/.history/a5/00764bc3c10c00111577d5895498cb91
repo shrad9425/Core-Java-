@@ -1,0 +1,57 @@
+package org.main.example;
+
+
+class TickTock{ 
+	public void tick() throws InterruptedException {
+			System.out.println("Tick ");
+			this.wait();
+			this.notify();
+
+	}
+
+	public void tock() throws InterruptedException {
+			System.out.println("Tock ");
+			this.wait();
+			this.notify();
+		
+	}
+}
+class Task implements Runnable{
+	Thread thread;
+	public Task(String name) {
+		this.thread = new Thread(this, name);
+		this.thread.start();
+	}
+	private static TickTock tt = new TickTock();
+	@Override
+	public void run() {
+		try {
+			if (Thread.currentThread().getName().equals ("Tickhead")) {
+				for(int i = 0; i <= 10; i++) {
+					System.out.print("Result	:	");
+					tt.tick();
+					Thread.sleep(250);
+				}
+				System.out.println();
+			}else {
+				for(int i = 0; i <= 10; i++) {
+					System.out.print("Result	:	");
+					tt.tock();
+					Thread.sleep(250);
+				}
+			}
+		}catch (InterruptedException e) {
+			throw new RuntimeException(e);
+		
+
+		}
+	}
+}
+public class Program {
+	public static void main(String[] args){
+		Task t1 = new Task("Tickhead");
+		
+		Task t2 = new Task("Tockhead");
+
+	}
+}

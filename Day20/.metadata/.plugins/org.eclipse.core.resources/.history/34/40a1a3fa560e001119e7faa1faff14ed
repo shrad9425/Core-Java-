@@ -1,0 +1,21 @@
+package org.main.example;
+
+public class Chief extends Thread {
+	private Kitchen kitchen;
+	
+	public Chief() {
+		this.kitchen = kitchen;
+	}
+	@Override
+	public void run() {
+		try {
+			while(true) {
+				String order = "burger";
+				kitchen.addOrder();
+				Thread.sleep(1000);
+			}
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
+}

@@ -1,0 +1,10 @@
+package org.main.spider;
+
+public class Program {
+	public static void main(String[] args) {
+		A a = new D();
+		a.acceptRecord();
+		a.sort();
+		a.printRecord();
+	}
+}

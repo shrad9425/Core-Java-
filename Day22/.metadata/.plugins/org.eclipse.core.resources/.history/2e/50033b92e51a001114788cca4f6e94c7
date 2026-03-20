@@ -1,0 +1,58 @@
+package org.main.example;
+
+import java.util.Collection;
+import java.util.Hashtable;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
+
+public class Program {
+	private static Map<Integer, String> getMap() {
+		Map<Integer, String> map = new Hashtable<>();
+		map.put(10, "apple");
+		map.put(20, "mango");
+		map.put(30, "guava");
+		map.put(40, "banana");
+		return map;
+	}
+	private static void printAllEntries(Map<Integer, String> map) {
+		System.out.println(map.size());
+	}
+	private static void printKeys(Map<Integer, String> map, int id) {
+		Integer keys = new Integer(id);
+		if(map.containsKey(keys)) {
+			String value = map.get(keys);
+			System.out.println( keys+" "+value); 
+		}else {
+	      System.out.println(keys+" not found"); 
+		}
+	}
+	private static void printValues(Map<Integer, String> map) {
+		Collection<String> c = map.values();
+		for(String value : c) 
+			System.out.println(value);
+	}
+	private static void printEntrySet(Map<Integer, String> map) {
+		Set<Entry<Integer,String>> entries = map.entrySet();
+		for (Entry<Integer, String> entry : entries) {
+			System.out.println(entry);
+		}
+	}
+	public static void main(String[] args) {
+		Map<Integer, String> map = Program.getMap();
+		//Program.printAllEntries(map);
+		//Program.printKeys(map,20);
+		//Program.printValues(map);
+		Program.printEntrySet(map);
+	}
+	
+	public static void main1(String[] args) {
+		Map<Integer, String> map = new Hashtable<>();
+		map.put(10, "apple");
+		map.put(20, "mango");
+		map.put(30, "guava");
+		map.put(40, "banana");
+		map.put(null, "apple");
+		System.out.println(map);
+	}
+}

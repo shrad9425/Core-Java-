@@ -1,0 +1,31 @@
+package prg.main.example;
+
+//abstract => when the implementation of method is logically 100% incomplete the we 
+			//should used abstract class or abstract method.
+
+abstract class Super{
+	public abstract void printRecord( ); 
+	
+	public void displayRecord() {
+		System.out.println("Super.displayRecord()");
+	}
+}
+
+class Sub extends Super{		
+	public void displayRecord() {
+		System.out.println("sub.displayRecord()");
+	}
+	public void printRecord( ) {
+		System.out.println("sub.printRecord()");
+	}
+}
+
+public class Program {
+	public static void main(String[] args) {
+		Super s2 = new Sub();	//upcasting
+		s2.printRecord();
+		s2.displayRecord();
+		
+		
+	}
+}

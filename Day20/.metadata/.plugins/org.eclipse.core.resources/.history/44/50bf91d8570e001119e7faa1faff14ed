@@ -1,0 +1,22 @@
+package org.main.example;
+
+public class Waiter {
+	private Kitchen kitchen;
+	
+	public Waiter(Kitchen kitchen) {
+		this.kitchen = kitchen;
+	}
+	private void run() {
+		try {
+			while(true) {
+				String order = kitchen.getOrder();
+				serve(order); 
+			}
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
+	private void serve(String order) {
+		System.out.println("Order:"+order);
+	}
+}

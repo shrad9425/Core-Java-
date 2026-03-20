@@ -1,0 +1,47 @@
+package org.example.main;
+
+class Super{
+	private String name;
+	private int empid;
+	
+	public String getName() {
+		return this.name;
+	}
+	public int getEmpid() {
+		return this.empid;
+	}
+	public Super(String name, int empid) {
+		this.name = name;
+		this.empid = empid;
+	}
+	public void printRecord() {
+		System.out.println(this.name+", "+this.empid);
+	}
+	
+}
+class Sub extends Super{
+	private float salary;
+
+	public Sub(String name, int empid, float salary) {
+		super(name, empid);
+		this.salary = salary;
+	}
+	public float getSalary() {
+		return this.salary;
+	}
+	//@Override
+	/*public void printRecord() {
+		super.printRecord();
+		System.out.println(this.salary);
+	}*/
+}
+
+public class Program {
+	public static void main(String[] args) {
+		Super s1 = new Sub("SHraddha", 2003, 45000.50f);	//upcasting
+		s1.printRecord();
+		
+		Sub s2 = (Sub)s1; 	//downcasting
+		s2.printRecord();
+	}
+}
